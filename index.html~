@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/devnexus2014.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<section>
+						<h1>Let's Build a Modern Android Application</h1>
+						<h3>Hoyt Summers Pittman III</h3>
+						<p>
+							<small>@summerspittman</small>
+							<small>+Summerspittman</small>
+							<small>(f)summerspittman</small>
+							<small>secondsun@gmail.com</small>
+						</p>
+						<p><small>Deploy Notes are <a href="https://docs.google.com/document/d/1vaHampsgettiJ528GkN-BYeWnKqP2qx-_C35K44jzRo/edit?usp=sharing">here</a></small></p>
+					</section>
+					<section>
+						<h1>Software you NEED</h1>
+						<h3>Java JDK 7</h3>
+						<h3>Android SDK</h3>
+						<h3>Android Studio OR Gradle 1.9</h3>
+						<h3>Git</h3>
+					</section>
+					<section>
+						<h1>Online Accounts You NEED</h1>
+						<h3>Google+</h3>
+						<h3>OpenShift</h3>
+					</section>
+					
+					<section>
+						<h1>Software you WANT</h1>
+						<h3>Maven</h3>
+						<h3>An IDE Which doesn't hate Maven</h3>
+						<h3>PostgresSQL</h3>
+						<h3>WildFly 8</h3>
+						<p><small>This is only if you want to run the DevNexus locally on your machine.</small></p>
+					</section>
+					<section>
+						<h1>Clone these repos</h1>
+						<pre><code>https://github.com/secondsun/DevnexusAndroid/</code></pre>
+						<pre><code>https://github.com/devnexus/devnexus-site/</code></pre>
+					</section>
+					<section>
+						<h1>Make friends with someone who has an Android phone</h1>
+						<h3>In theory this will work on the emulator.</h3>
+						<h3>In practice: The Google APIs x86 4.4.2 package works perfectly</h3>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>OBLIG About me.</h1>
+						<h4>(because otherwise why would you trust me?)</h4>
+					</section>
+					<section>
+						<h2>Sr. Software Engineer at Red Hat</h2>
+						<h2>Contributer to Android Aerogear project</h2>
+						<h2>Open Source Fan Boy</h2>
+						<p><small>Because any OS where you can say C : RUN with a straight face is EVIL!</small></p>
+					</section>
+					<section>
+						<h2>2010 MS HCI GaTech</h2>
+						<h2>Cyclist</h2>
+						<h2>DevNexus Organizer</h2>
+						<h2>Ajug Organizer/Web Chair</h2>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>OBLIG About what I work on</h1>
+						<p><small>Shameless plug is shameless</small></p>
+					</section>
+					<section>
+						<h1>Aerogear</h1>
+						<h2>http://aerogear.org</h2>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Goals</h1>
+						<h3>Build the Devnexus Android app</h3>
+						<h3>Deploy the Devnexus Site to Openshift</h3>
+						<h3>Deploy the Aerogear Unified Push Server to Openshift</h3>
+						<h3>Configure everything to work together!</h3>
+					</section>
+					<section>
+						<h1>Android Services</h1>
+						<h3>GCM</h3>
+						<h3>Sync</h3>
+						<h3>Google Authentication</h3>
+						<p><small>And how Aerogear can make some of this very easy for you</small></p>
+					</section>
+					<section>
+						<h1>Improvements</h1>
+						<p><small>You can help!</small></p>
+						<h3>Caching</h3>
+						<h3>Optional Sign In</h3>
+						<h3>Design and UI/UX</h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Demo of the App</h1>
+						<a href="https://plus.google.com/photos/search/%23Videos?pid=5957654425553308370&oid=103442292643366117394">Video</a>
+					</section>
+					<section>
+						<h1>Demo of the Push Server</h1>
+						<a href="https://push-coffeeregister.rhcloud.com">Aerogear Push Admin</a>
+					</section>
+					<section>
+						<h1>Demo of the DevNexus Site</h1>
+						<a href="http://devnexus.com">DevNexus</a>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Filler if people are still downloading </h1>
+						<h3>We'll come back to this</h3>
+					</section>
+					<section>
+						<h1>How Android Handles Sync</h1>
+						<h3>Content Provider</h3>
+						<h3>Account Authenticator</h3>
+						<h3>Sync Adapter</h3>
+						<h3>Implementations are in the DevnexusAndroid project.</h3>
+					</section>
+					<section>
+						<h1>How the DevNexus Server handles your Calendar</h1>
+						<h3>Restful Endpoints</h3>
+						<h3>Google Plus session validation</h3>
+						<h3>Messaging Openshift based Push server</h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Getting this running!</h1>
+						<h3>Setting up Googley services</h3>
+						<h3>Setting up Unified Push Server</h3>
+						<h3>Configuring DevNexus webapp</h3>
+						<h3>Configuring DevNexus Android app</h3>
+						<h3>Deploying DevNexus Web app</h3>
+						<h3>Running Android App</h3>
+					</section>
+					<section>
+						<h1>Setting up Googley services</h1>
+						<h3>https://cloud.google.com/console/project</h3>
+						<h3>Create application</h3>
+						<h3>Add GCM and add Google+ APIs</h3>
+						<h3>Add server information</h3>
+						<h3>Add Android key and package (org.devnexus)</h3>
+						<h3>Record keys and other information</h3>
+					</section>
+					<section>
+						<h1>Setting up Unified Push Server</h1>
+						<h3>Deploy the Unified Push Cartridge</h3>
+						<h3>This is an Open Shift App</h3>
+					</section>
+					<section>
+						<h1>Configuring DevNexus webapp</h1>
+						<h3>Create an OpenShift App</h3>
+						<h3>Use JBOSSEWS 7 (Tomcat)</h3>
+						<h3>Add Postgres Gear</h3>
+						<h3>Configure Postgres</h3>
+						<h3>Configure DevNexus</h3>
+					</section>					
+					<section>
+						<h1>Configure Postgres</h1>
+						<h3>Create devnexus database</h3>
+						<h3>Create devnexus user</h3>
+						<h3>Grant all to devnexus</h3>
+						<h3>Import devnexus.postgres.dmp</h3>
+					</section>
+					<section>
+						<h1>Configure DevNexus</h1>
+						<h3>export TING_HOME</h3>
+						<h3>create ting.properties</h3>
+						<h3>Set ting variables</h3>
+							<pre><code data-trim contenteditable>server.address=
+
+database.hibernate.dialect=
+database.hibernate.show_sql=
+database.jdbc.driverClassName=
+database.jdbc.url=
+database.jdbc.username=
+database.jdbc.password=
+
+TING_CLIENT_ID=
+TING_CLIENT_SECRET=
+TING_PUSH_URL=
+TING_PUSH_APP_ID=
+TING_PUSH_MASTER_SECRET=
+</code></pre>
+
+					</section>
+					<section>
+						<h1>Configuring DevNexus Android app</h1>
+						<h3>Edit Manifest</h3>
+						<h3>Edit Constants.java</h3>
+					</section>
+					<section>
+						<h1>Deploying DevNexus Web app</h1>
+						<h3>Clone your OpenShift repo</h3>
+						<h3>Copy DevNexus Code into OpenShift repo</h3>
+						<h3>Edit your deploy hooks to set TING_HOME and ting.properties</h3>
+					</section>
+					<section>
+						<h1>Running Android App</h1>
+						<h3>Hit the run button in Android Studio</h3>
+					</section>
+				</section>
+				<section>
+					<h1>GOOD LUCK</h1>
+					<h4>https://github.com/secondsun/reveal.js/tree/devnexus_2014</h4>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
